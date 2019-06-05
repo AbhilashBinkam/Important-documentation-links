@@ -1,0 +1,31 @@
+Day One:
+
+www.javaformula.com
+
+--> Complete the Conditions and Operators Section
+--> Complete (Using local Variables and Using Static Variables) NOTE: Need to go indepth on what is Static variable? and what are the different ways to initialize the variables?
+
+	--> Task on static variables
+		1. Need to create atleast 10 different programs on static and non static variables (Minimum 10 programs)
+		
+
+
+Expected output:
+		--> Need to commit all the programs related to static and non static varaibles to the git hub repository. 
+		--> Need to commit the sample java project created in your local system.
+		
+		
+
+IMPORTANT LINKS: (Read the same document every now and then as you progress through the language)
+https://www.youth4work.com/Talent/Core-Java/Forum/121150-java-compiler-and-interpreter
+https://www.journaldev.com/12552/public-static-void-main-string-args-java-main-method
+
+
+Links to read after some expertise:
+https://www.quora.com/Why-is-main-in-Java-void
+http://www.mathcs.emory.edu/~cheung/Courses/170/Syllabus/09/command-args.html
+https://www.uml-diagrams.org/examples/java-6-thread-state-machine-diagram-example.html
+
+
+Spring ASYNC:
+https://spring.io/guides/gs/async-method/
