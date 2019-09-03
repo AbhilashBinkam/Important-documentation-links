@@ -1,0 +1,57 @@
+In parent pom.xml we configure
+<properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <junitExcludes>integration</junitExcludes>
+        <skipSpotBugs>${skipTests}</skipSpotBugs>
+    </properties>
+<CiManagement>
+<system></system>
+<url></url>
+</CiManagement>
+
+<scm>
+<connection>github SSH URL</connection>
+<developerConnection>scm:git:SSH URL<developerConnection>
+<url>HTTPS URL</url>
+<tag>HEAD</tag>
+</scm>
+
+<repositories>
+<repository>
+<releases/>
+<snapshots>
+<enabled>false</enabled>
+</snapshots>
+<id>NAME</id>
+<name>NAME</name>
+<url>https://</url>
+</repository>
+</repositories>
+
+<pluginRepositories>
+<pluginRepository>
+<releases/>
+<snapshots>
+<enabled>false</enabled>
+</snapshots>
+<id>NAME</id>
+<url>https://</url>
+<pluginRepository>
+</pluginRepositories>
+
+<profiles>
+        <profile>
+            <id>integration</id>
+            <properties>
+                <junitIncludes>integration</junitIncludes>
+                <junitExcludes/>
+            </properties>
+        </profile>
+    </profiles>
+
+<modules>
+        <module>moduleOne</module>
+        <module>moduleTwo</module>
+        <module>moduleThree</module>
+    </modules>
