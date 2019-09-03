@@ -55,3 +55,54 @@ In parent pom.xml we configure
         <module>moduleTwo</module>
         <module>moduleThree</module>
     </modules>
+        
+        
+--------------------------------------------------MAVEN BUILD CONFIG----------------------------------------------
+        
+ http://jd.benow.ca/jd-eclipse/update/
+
+<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering>
+			</resource>
+		</resources>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<version>${version.spring.boot}</version>
+				<configuration>
+					<jvmArguments>
+						-Xdebug
+						-Xrunjdwp:transport=dt_socket,server=y,suspend=${debug.suspend},address=${debug.port}
+					</jvmArguments>
+					<arguments>
+						<argument>--spring.config.additional-location=${user.home}/etc/${project.groupId}/${project.artifactId}/conf/application.yml</argument>
+					</arguments>
+					<layout>JAR</layout>
+				</configuration>
+				<executions>
+					<execution>
+						<id>repackage</id>
+						<goals>
+							<goal>repackage</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-assembly-plugin</artifactId> 
+				<dependencies> <dependency> <groupId>com.apple.appeng.aluminum</groupId> 
+				<artifactId>aluminum-assembly-descriptors</artifactId> <version>${version.appeng.aluminum}</version> 
+				</dependency> </dependencies> <executions> <execution> <id>package-app</id> 
+				<goals> <goal>single</goal> </goals> <phase>package</phase> </execution> 
+				</executions> <configuration> <escapeString>\</escapeString> <descriptorRefs> 
+				<descriptorRef>executable-jar-distrib</descriptorRef> </descriptorRefs> </configuration> 
+				</plugin> -->
+		</plugins>
+	</build>       
