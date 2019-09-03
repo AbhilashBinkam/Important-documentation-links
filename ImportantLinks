@@ -13,3 +13,55 @@ https://www.uml-diagrams.org/examples/java-6-thread-state-machine-diagram-exampl
 
 Spring ASYNC:
 https://spring.io/guides/gs/async-method/
+
+
+Design Patterns:
+Circuit Breaker & Bulk Head design pattern
+
+Algorithms:
+Counting Sort
+poly phase sorting 
+https://www.geeksforgeeks.org/analysis-of-algorithms-set-3asymptotic-notations/
+
+Java 8:
+Fork Join Pool
+
+Interview Important Questions:
+
+https://www.quora.com/Im-a-Java-developer-What-should-I-learn-these-days/answer/Gautam-Gupta-102
+
+1. How to remove duplicate rows from X table?
+
+NOTE: PARTITION BY -- divides the query result set into partitions
+
+   Let's create a common table expression. 
+with EmployeeCTE As (select *, ROW_NUMBER() OVER (partition by ID order by ID) as RowNumber from Employee);
+
+Delete from EmployeeCTE where RowNumber > 1;
+
+2. Method Overriding Exception handling criteria?
+3. Future Object in Callable Interface?
+4. Object.clone() concepts?
+5. HashMap and concurrentHashMap Difference?
+6. 
+		char c;
+		int i;
+		c = 'B';		// 1
+		i = c;		//2
+		System.out.println(i);
+	//	c = i + 1;	//3
+	//	c++;		//4
+	
+o/p: error at line 3 ; what is the value of i? --> i = 66(ASCII). while performing the operation we need to cast the char to Integer
+
+7. If we create an object reference i.e Sample sam  = new Sample(); then the default values get initialized to variables i.e. for String null, and for int 0 and for boolean false.
+without creating an object and we didn't initialize any value... and we used in any place of the program then we get compile time error.
+8. https://www.geeksforgeeks.org/strictfp-keyword-java/
+9. https://www.geeksforgeeks.org/javax-servlet-http-cookie-class-java/
+10. http://tutorials.jenkov.com/java-util-concurrent/blockingqueue.html
+11. http://tutorials.jenkov.com/java-util-concurrent/linkedblockingqueue.html
+
+
+Documents to Blog:
+RedisClusterClient
+https://onemorecupof-coffee.com/how-to-build-a-simple-website-and-make-money-from-it/
